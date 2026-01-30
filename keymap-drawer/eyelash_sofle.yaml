@@ -40,7 +40,7 @@ layers:
   - L
   - {t: ;, s: ':'}
   - .
-  - Alt+Sft+Gui+$$mdi:apple-keyboard-control$$
+  - Sft+$$mdi:apple-keyboard-control$$
   - Z
   - X
   - C
@@ -51,8 +51,8 @@ layers:
   - M
   - {t: ',', s: <}
   - {t: ., s: '>'}
-  - {t: /, s: '?'}
-  - {t: \, s: '|'}
+  - {t: /, h: \, s: '?'}
+  - '?'
   - $$mdi:volume-off$$
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-option$$
