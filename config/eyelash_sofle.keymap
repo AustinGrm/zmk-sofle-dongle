@@ -71,14 +71,14 @@
             label = "SHIFT_MB3";
         };
 
-        COPY: COPY {
+        COPe: COPY {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kt LEFT_COMMAND &kp C &kt LEFT_COMMAND>;
             label = "COPY";
         };
 
-        PASTE: PASTE {
+        PASTEy: PASTE {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kt LEFT_COMMAND &kp V &kt LEFT_COMMAND>;
