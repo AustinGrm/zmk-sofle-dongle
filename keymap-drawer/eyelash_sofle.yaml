@@ -54,8 +54,8 @@ layers:
   - {t: /, h: \, s: '?'}
   - '?'
   - $$mdi:volume-off$$
-  - $$mdi:apple-keyboard-control$$
-  - $$mdi:apple-keyboard-option$$
+  - {t: C, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: V, h: '$$mdi:apple-keyboard-option$$'}
   - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-command$$'}
   - {t: F13, h: layer1}
   - {t: '$$mdi:backspace$$', h: '$$mdi:apple-keyboard-option$$'}
