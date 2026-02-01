@@ -54,7 +54,7 @@ layers:
   - {t: /, h: \, s: '?'}
   - '?'
   - $$mdi:volume-off$$
-  - {t: F20, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: F18, h: '$$mdi:apple-keyboard-control$$'}
   - {t: F19, h: '$$mdi:apple-keyboard-option$$'}
   - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-command$$'}
   - {t: F13, h: layer1}
@@ -121,9 +121,9 @@ layers:
   - $$mdi:volume-off$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: 'Gui+$$mdi:backspace$$', type: backspace}
   - {type: held}
-  - {t: '$$mdi:backspace$$', type: backspace}
+  - {t: 'Alt+$$mdi:backspace$$', type: backspace}
   - $$mdi:mouse-left-click-outline$$
   - $$mdi:mouse-left-click-outline$$
   - $$mdi:mouse-right-click-outline$$
