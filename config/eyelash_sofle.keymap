@@ -113,7 +113,7 @@
 &trans          &trans        &trans        &trans        &trans        &out OUT_TOG    &mkp LCLK        &trans    &trans     &trans          &kp LEFT_BRACKET  &kp RIGHT_BRACKET
             >;
 
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&inc_dec_kp C_AC_SCROLL_UP C_AC_SCROLL_DOWN>;
         };
 
         layer_3 {
