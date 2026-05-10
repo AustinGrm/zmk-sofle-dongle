@@ -59,12 +59,12 @@ layers:
   - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-command$$'}
   - {t: F13, h: layer1}
   - {t: '$$mdi:backspace$$', h: '$$mdi:apple-keyboard-option$$'}
-  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - F16
   - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-shift$$'}
   - {t: '$$mdi:keyboard-return$$', h: '2'}
-  - {t: 'Alt+$$mdi:apple-keyboard-control$$', h: F17}
-  - {t: (, h: '['}
-  - {t: Alt+G, h: ']'}
+  - {t: Alt+G, h: 'Alt+$$mdi:apple-keyboard-shift$$'}
+  - {t: F15, h: 'Alt+$$mdi:apple-keyboard-command$$'}
+  - {t: F17, h: ']'}
   layer1:
   - {t: '`', s: '~'}
   - F1
