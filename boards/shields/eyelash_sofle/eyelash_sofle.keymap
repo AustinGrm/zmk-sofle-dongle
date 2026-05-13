@@ -19,7 +19,7 @@
 
  */
 
-#define ZMK_MOUSE_DEFAULT_MOVE_VAL 600   // was 1200 (overshoot); ZMK default
+#define ZMK_MOUSE_DEFAULT_MOVE_VAL 450   // 600 still a touch fast
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 20    // 10
 
 
