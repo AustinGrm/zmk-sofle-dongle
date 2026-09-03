@@ -1,8 +1,34 @@
 ---
 include:
+  # ---------------------------------------------------------------
+  # Dongle topology: XIAO nRF52840 dongle = central (USB), no display.
+  # Flash all three, then settings_reset on all three the first time.
+  # ---------------------------------------------------------------
+  - board: seeeduino_xiao_ble
+    shield: eyelash_sofle_dongle
+    # config/eyelash_sofle.conf is merged after the shield conf, so these
+    # three have to be forced from the cmake line to win.
+    cmake-args: -DCONFIG_ZMK_DISPLAY=n -DCONFIG_EC11=n -DCONFIG_ZMK_SLEEP=n
+    artifact-name: sofle_dongle_xiao
+  - board: nice_nano_v2
+    shield: eyelash_sofle_peripheral_left nice_view
+    artifact-name: sofle_peripheral_left
+  - board: nice_nano_v2
+    shield: eyelash_sofle_peripheral_right nice_view
+    artifact-name: sofle_peripheral_right
+  - board: seeeduino_xiao_ble
+    shield: settings_reset
+    artifact-name: settings_reset_xiao
+
+  # ---------------------------------------------------------------
+  # BT-only topology (no dongle): left = central. Keep as fallback.
+  # ---------------------------------------------------------------
   - board: nice_nano_v2
     shield: eyelash_sofle_left nice_view
+    artifact-name: sofle_bt_left
   - board: nice_nano_v2
     shield: eyelash_sofle_right nice_view
+    artifact-name: sofle_bt_right
   - board: nice_nano_v2
     shield: settings_reset
+    artifact-name: settings_reset_nice_nano
