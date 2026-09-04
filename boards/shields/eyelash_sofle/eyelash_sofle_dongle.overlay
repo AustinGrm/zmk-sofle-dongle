@@ -26,6 +26,28 @@
         events = <0>;
     };
 
+    /* The knob lives on the left half, but ZMK resolves sensor-bindings on the
+     * CENTRAL. Without a zmk,keymap-sensors node here, ZMK_KEYMAP_HAS_SENSORS is
+     * false, zmk_keymap_sensor_event() is compiled out, and rotation events
+     * forwarded from the peripheral are silently dropped. The encoder node only
+     * needs to exist so the phandle resolves — it stays disabled so the driver
+     * never touches these pins on the XIAO (sensors.c uses DEVICE_DT_GET_OR_NULL).
+     */
+    left_encoder: encoder_left {
+        compatible = "alps,ec11";
+        label = "LEFT_ENCODER";
+        resolution = <4>;
+        steps = <40>;
+        a-gpios = <&gpio1 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        b-gpios = <&gpio1 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        status = "disabled";
+    };
+
+    sensors {
+        compatible = "zmk,keymap-sensors";
+        sensors = <&left_encoder>;
+    };
+
     default_transform: keymap_transform_0 {
         compatible = "zmk,matrix-transform";
         columns = <14>;

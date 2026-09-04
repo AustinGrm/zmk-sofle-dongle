@@ -8,7 +8,9 @@ include:
     shield: eyelash_sofle_dongle
     # config/eyelash_sofle.conf is merged after the shield conf, so these
     # three have to be forced from the cmake line to win.
-    cmake-args: -DCONFIG_ZMK_DISPLAY=n -DCONFIG_EC11=n -DCONFIG_ZMK_SLEEP=n
+    # EC11 stays enabled: the encoder node is disabled here, so the driver has
+    # zero instances, but the sensors node must be present for the knob to work.
+    cmake-args: -DCONFIG_ZMK_DISPLAY=n -DCONFIG_ZMK_SLEEP=n
     artifact-name: sofle_dongle_xiao
   - board: nice_nano_v2
     shield: eyelash_sofle_peripheral_left nice_view
